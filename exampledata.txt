@@ -1,3 +1,5 @@
+Classification: wind
+time - acceleration
 0 10
 1 8
 2 6

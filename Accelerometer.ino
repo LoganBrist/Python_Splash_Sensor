@@ -27,7 +27,7 @@ void loop()
     
     Serial.println();
   }
-  delay(250); //Log data every .25 seconds
+  //delay(250); //Log data every .25 seconds. No delay produces about 48.58 samples per second, as tested over a span of 40 seconds.
 }
 
 // Using the accel.x, accel.y and accel.z variables. Before using these variables you must call accel.read().

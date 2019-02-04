@@ -26,22 +26,23 @@ while os.path.exists("data%s.txt" % i):
     i += 1
 write_to_file_path = "data%s.txt" % i
 
-output_file = open(write_to_file_path, "w+")
+with open(write_to_file_path, "w+") as output_file:
+#output_file = open(write_to_file_path, "w+")
 
-
-while True:
-    line = ser.readline()
-    line = line.decode("utf-8") 
-    print(line);
-    output_file.write(line)
     
-    try:  
-        if keyboard.is_pressed('e'):  # if key 'q' is pressed 
-            print('Program ended')
-            break  # finishing the loop
+    while True:
+        line = ser.readline()
+        line = line.decode("latin-1")  #"utf-8"
+        print(line);
+        output_file.write(line)
         
-    except:
-        pass
-    
+        try:  
+            if keyboard.is_pressed('e'):  # if key 'q' is pressed 
+                print('Program ended')
+                break  # finishing the loop
+            
+        except:
+            pass
+        
 output_file.close()    
 ser.close()

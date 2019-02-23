@@ -76,7 +76,7 @@ spectrogram = cf.spectrogram(z,512,fs,0,10,cla = classification)
   #PSD
   #Peak frequencies
   #Peak distance
-
+  #Principle component analysis
 #------------------------------------------------------------------------------
 # Statistical analysis
   

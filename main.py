@@ -14,7 +14,7 @@ Created on Thu Jan 31 18:07:21 2019
 # =============================================================================
 
 #------------------------------------------------------------------------------
-# Imports and variales
+# Imports and variables
 
 #Import Functions from function file
 import CustomFunctions as cf
@@ -25,10 +25,11 @@ path.append(r"Data\Continuous Motion/") #path[0]
 path.append(r"Data\Small Object/")      #path[1] 
 path.append(r"Data\Stationary/")        #path[2] 
 path.append(r"Data\Sample Frequency/")  #path[3]
+path.append(r"E:/")                     #path[4] SD CARD
 
 #Parameters
 fs = 283.81           #sample rate of testing setup
-directory   = path[2] #Which data set to use (see above for list)
+directory   = path[4] #Which data set to use (see above for list)
 nameroot    = 'DATA'  #Data file name, excluding the number
 fileformat  = '.TXT'  #Data file format
 t0    = 25            #window start time in seconds
@@ -76,10 +77,12 @@ spectrogram = cf.spectrogram(z,512,fs,0,10,cla = classification)
   #PSD
   #Peak frequencies
   #Peak distance
-  #Principle component analysis
+  
+  #Principal component analysis
+
 #------------------------------------------------------------------------------
 # Statistical analysis
-  
+''' 
   #Correlation matrix - belongs in Customfunctions
   def correl_matrix(X,cols):
     fig = plt.figure(figsize=(7,7), dpi=100)
@@ -230,5 +233,5 @@ print('Combined Accuracy: %.2f' % accuracy_score(y_combined, y_combined_pred))
 # that can be exported. Coding then needs to be done on the microcontroller to 
 # stream accelerometer data through the predictor values.
 
-  
+'''
 # tbc.......

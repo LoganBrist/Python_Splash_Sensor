@@ -200,7 +200,7 @@ def loaddata(path,nameroot,fileformat):
                     
             x.append(np.array(x_temp)) 
             y.append(np.array(y_temp))
-            z.append(np.array(y_temp))
+            z.append(np.array(z_temp))
             
             classification.append(label)
             
